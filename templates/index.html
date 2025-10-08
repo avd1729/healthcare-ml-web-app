@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Diabetes Prediction</h1>
+      <form id="predict-form">
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="0">Female</option>
+          <option value="1">Male</option>
+        </select>
+
+        <label>Hypertension</label>
+        <select name="hypertension" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+
+        <label>Heart Disease</label>
+        <select name="heart_disease" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+
+        <label>Smoking History</label>
+        <select name="smoking_history" required>
+          <option value="0">never</option>
+          <option value="1">No Info</option>
+          <option value="2">current</option>
+          <option value="3">former</option>
+          <option value="4">ever</option>
+        </select>
+
+        <label>BMI</label>
+        <input name="bmi" type="number" step="0.01" min="0" required value="25.0" />
+
+        <label>HbA1c level</label>
+        <input name="HbA1c_level" type="number" step="0.1" min="0" required value="6.0" />
+
+        <label>Blood glucose level</label>
+        <input name="blood_glucose_level" type="number" step="1" min="0" required value="120" />
+
+        <label>Age category</label>
+        <select name="age_category" required>
+          <option value="0">0–30</option>
+          <option value="1">30–50</option>
+          <option value="2">50+</option>
+        </select>
+
+        <button type="submit">Predict</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
